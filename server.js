@@ -5,34 +5,37 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-var articles=
-{
-var 'article-one' :{
-    title :'Article one, Lokesh', 
-    heading :`Article one`,
-    date :`feb 21 2018`,
-    content: `<p>
-                  This is the content of article one.This is the content of article one.This is the content of article one.This is the content of article one.This is the content of article one.
-                <p>
-                 this is also the same.this is also the same.this is also the same.this is also the same.this is also the same.this    is also the same.this is also the same.this is also the same.this is also the same.
-                </p>`
-},
-var 'artile-two':{
+var articles={
+    var 'article-one' :
+    {
+        title :'Article one, Lokesh', 
+        heading : `Article one`,
+        date :`feb 21 2018`,
+        content: `<p>
+                      This is the content of article one.This is the content of article one.This is the content of article one.This is the content of article one.This is the content of article one.
+                    </p>
+                    <p>
+                     this is also the same.this is also the same.this is also the same.this is also the same.this is also the same.this    is also the same.this is also the same.this is also the same.this is also the same.
+                    </p>`
+    },
+    var 'artile-two':{
     title :'Article two, Lokesh', 
     heading :'Article two',
     date :`feb 21 2018`,
     content: `<p>
                   This is the content of article two.This is the content of article two.This is the content of article two.This is the content of article two.This is the content of article two.
+                  </p>
                 <p>
                  this is also the same.this is also the same.this is also the same.this is also the same.this is also the same.this    is also the same.this is also the same.this is also the same.this is also the same.
                 </p>`
 },
-var 'article-three':{
+    var 'article-three':{
     title :'Article three, Lokesh', 
     heading :'Article two',
     date :`feb 21 2018`,
     content: `<p>
                   This is the content of article three.This is the content of article three.This is the content of article three.This is the content of article three.This is the content of article three.
+                </p>
                 <p>
                  this is also the same.this is also the same.this is also the same.this is also the same.this is also the same.this    is also the same.this is also the same.this is also the same.this is also the same.
                 </p>`
