@@ -20,5 +20,5 @@ button.onclick=function(){
     };
     
     request.open('GET','http://mamidilsai.imad.hasura-app.io/counter',true);
-    res.send(null);
+    request.send(null);
 };
