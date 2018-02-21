@@ -1,9 +1,14 @@
 var button = document.getElementById('counter');
 
 var counter=0;
+
+
 button.onclick=function(){
+    
+    
+    var request =new XMLHttpRequest();
     
     counter = counter+1;
     var span=document.getElementById('count');
-    span.InnerHTML =counter.toString();
+    span.innerHTML =counter.toString();
 };
