@@ -5,8 +5,8 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-var content{
-    title :`Article one, Lokesh`, 
+var articleone={
+    title :'Article one, Lokesh', 
     heading :'Article one',
     date :`feb 21 2018`,
     content: `<p>
@@ -17,13 +17,49 @@ var content{
                 </p>`
 };
 
+function createtemplate(data){
+    var title =data.title;
+    var date =data.date;
+    var heading=data.heading;
+    var content=data.content;
+    
+    var htmltemplate=`
+    <html>
+    <head>
+        <title>
+            ${title}
+        </title>
+        <meta name="visupport" content="width-device-width,initial-scale=1"/>
+        <link href="/ui/style.css" rel="stylesheet" />
+    </head>
+    
+    <body>
+        <div class='container'>
+            <div>
+                <a href="/">home</a>
+            </div>
+            <hr/>
+            <h3>
+             ${heading}
+            </h3>
+            <div>
+             ${date}
+            </div>
+            <div>
+                ${content}
+        </div>
+        </div>
+    </body>
+</html>`;
+return htmltemplate;
+}
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
 app.get('/article-one',function (req, res)
 {
-    res.sendFile(path.join(__dirname, 'ui', 'article-one.html'));
+    res.sendFile(createtemplate(articleone));
 });
 
 app.get('/artile-two',function (req, res)
